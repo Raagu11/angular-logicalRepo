@@ -4,17 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { APP_CONFIG, APP_SERVICE_CONFIG } from '../AppConfig/appconfig.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],
-  providers: [
-    {
-      provide: APP_SERVICE_CONFIG,
-      useValue: APP_CONFIG,
-    },
-  ],
+  providers: [],
 })
 export class AppModule {}
