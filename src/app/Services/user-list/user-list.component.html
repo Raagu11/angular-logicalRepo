@@ -1,11 +1,13 @@
 <p>user-list first get request here!</p>
 <div class="container">
   <div class="row">
-    <div class="col-3 mt-3" *ngFor="let item of userdata">
+    <div class="col-3 mt-3" *ngFor="let item of userdata; let i = index">
       <div class="card" style="width:18rem;">
+        {{ i }}
         <img src="{{ item.avatar }}" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">Card-Title</h5>
+          <p>{{ item.email }}</p>
           <p class="card-text">{{ item.first_name }} {{ item.last_name }}</p>
         </div>
       </div>
