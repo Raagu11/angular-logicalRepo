@@ -22,6 +22,8 @@
     <div class="col-md-4">User-Data</div>
     <pre>{{ userData | json }}</pre>
     <div *ngFor="let user of userData | keyvalue">
+      {{ user.key }}
+      {{ user.value }}
       {{ user.avavtar }}
       {{ user.email }}
       {{ user.first_name }}
