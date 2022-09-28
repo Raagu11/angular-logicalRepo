@@ -7,6 +7,7 @@ import { HelloComponent } from './hello.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserListComponent } from './Services/user-list/user-list.component';
 import { UsersComponent } from './users/users.component';
+import { UsersService } from './Services/users.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
@@ -17,6 +18,6 @@ import { UsersComponent } from './users/users.component';
     UsersComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [],
+  providers: [UsersService],
 })
 export class AppModule {}
