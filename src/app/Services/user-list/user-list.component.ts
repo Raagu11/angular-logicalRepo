@@ -8,18 +8,17 @@ import { UsersService } from '../../Services/users.service';
   styleUrls: ['./user-list.component.css'],
 })
 export class UserListComponent implements OnInit {
-  userData: UserInterface[] = [];
+  constructor(private userService: UsersService) {}
 
-  constructor(private user: UsersService) {}
+  userData: UserInterface[] = [];
 
   ngOnInit(): void {
     this.getUserList();
   }
 
   getUserList() {
-    this.user.getUsers().subscribe((res) => {
-      this.userData = res;
-      console.log(this.userData);
+    this.userService.getUsers().subscribe({
+      next: (res) => (this.userData = res),
     });
   }
 }

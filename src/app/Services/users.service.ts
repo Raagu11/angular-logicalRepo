@@ -5,12 +5,11 @@ import { UserInterface } from '../Services/user-list/userinterface';
 
 @Injectable()
 export class UsersService {
-  endpoint: string = 'https://reqres.in/api/users';
+  endpointUrl: string = 'https://jsonplaceholder.typicode.com/users';
 
   constructor(private http: HttpClient) {}
 
   getUsers(): Observable<UserInterface[]> {
-    let options = {};
-    return this.http.get<UserInterface[]>(this.endpoint, options);
+    return this.http.get<UserInterface[]>(this.endpointUrl);
   }
 }

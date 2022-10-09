@@ -1,6 +1,5 @@
 export interface UserInterface {
-  avavtar: string;
+  id: string;
+  name: string;
   email: string;
-  first_name: string;
-  last_name: string;
 }
